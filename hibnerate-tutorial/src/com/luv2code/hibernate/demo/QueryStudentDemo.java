@@ -66,6 +66,7 @@ public class QueryStudentDemo {
 			System.out.println("Done!");
 		}
 		finally {
+			session.close();
 			factory.close();
 		}
 	}

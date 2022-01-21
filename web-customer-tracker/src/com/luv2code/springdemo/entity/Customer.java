@@ -1,4 +1,4 @@
-package com.luv2code.hibernate.demo.entity;
+package com.luv2code.springdemo.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,8 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="student")
-public class Student {
+@Table(name="customer")
+public class Customer {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -23,17 +23,10 @@ public class Student {
 	private String lastName;
 	
 	@Column(name="email")
-	private String email;	
-	 
+	private String email;
 	
-	public Student() {
+	public Customer() {
 		
-	}
-
-	public Student(String firstName, String lastName, String email) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.email = email;
 	}
 
 	public int getId() {
@@ -70,10 +63,11 @@ public class Student {
 
 	@Override
 	public String toString() {
-		return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
+		return "Customer [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
 	}
-	
+		
 }
+
 
 
 
