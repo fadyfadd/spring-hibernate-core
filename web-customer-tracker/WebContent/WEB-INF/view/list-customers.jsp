@@ -26,7 +26,7 @@
 	</div>
 	
 	<div id="container">
-	
+	 
 		<div id="content">
 		    <form:form action="search" method="GET">
                 Search customer: <input type="text" name="theSearchName" />

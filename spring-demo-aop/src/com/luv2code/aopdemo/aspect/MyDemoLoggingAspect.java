@@ -1,3 +1,4 @@
+
 package com.luv2code.aopdemo.aspect;
 
 import org.aspectj.lang.annotation.Aspect;
@@ -12,13 +13,21 @@ public class MyDemoLoggingAspect {
 	
 	// let's start with an @Before advice
 
-	@Before("execution(public void addAccount())")
+	//@Before("execution(public void add*())")
+	//@Before("execution(public void com.*.aopdemo.dao.*.*(..))")
+	//@Before("execution(* add*())")
+	@Before("execution(* com.luv2code.aopdemo.dao.*.*(..))")
+	//@Before("execution(* add*(com.luv2code.aopdemo.Account, ..))")
 	public void beforeAddAccountAdvice() {
 		
-		System.out.println("\n=====>>> Executing @Before advice on addAccount()");
+		System.out.println("\n=====>>> Executing @Before advice on method");
 		
 	}
 }
+
+
+
+
 
 
 
