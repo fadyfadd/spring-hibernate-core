@@ -60,7 +60,7 @@
          APR (HTTP/AJP) Connector: /docs/apr.html
          Define a non-SSL/TLS HTTP/1.1 Connector on port 8080
     -->
-    <Connector connectionTimeout="20000" port="8085" protocol="HTTP/1.1" redirectPort="8443"/>
+    <Connector connectionTimeout="20000" port="8087" protocol="HTTP/1.1" redirectPort="8443"/>
     <!-- A "Connector" using the shared thread pool-->
     <!--
     <Connector executor="tomcatThreadPool"
@@ -152,7 +152,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="spring-mvc-demo" path="/spring-mvc-demo" reloadable="true" source="org.eclipse.jst.jee.server:spring-mvc-demo"/><Context docBase="web-customer-tracker" path="/web-customer-tracker" reloadable="true" source="org.eclipse.jst.jee.server:web-customer-tracker"/><Context docBase="mycoolwebapp" path="/mycoolwebapp" reloadable="true" source="org.eclipse.jst.j2ee.server:mycoolwebapp"/><Context docBase="web-customer-tracker-aop" path="/web-customer-tracker-aop" reloadable="true" source="org.eclipse.jst.jee.server:web-customer-tracker-aop"/><Context docBase="spring-security-demo-01-base-app" path="/spring-security-demo" reloadable="true" source="org.eclipse.jst.jee.server:spring-security-demo-01-base-app"/><Context docBase="spring-security-demo-02-basic-security" path="/spring-security-demo-02" reloadable="true" source="org.eclipse.jst.jee.server:spring-security-demo-02-basic-security"/><Context docBase="spring-security-demo-03-custom-login-form" path="/custom-login-form" reloadable="true" source="org.eclipse.jst.jee.server:spring-security-demo-03-custom-login-form"/></Host>
+      <Context docBase="spring-security-demo-01-base-app" path="/spring-security-demo9" reloadable="true" source="org.eclipse.jst.jee.server:spring-security-demo-01-base-app"/><Context docBase="web-customer-tracker" path="/web-customer-tracker" reloadable="true" source="org.eclipse.jst.jee.server:web-customer-tracker"/><Context docBase="spring-security-demo-03-custom-login-form" path="/jdbcplaintext" reloadable="true" source="org.eclipse.jst.jee.server:spring-security-demo-03-custom-login-form"/><Context docBase="web-customer-tracker-aop" path="/web-customer-tracker-aop" reloadable="true" source="org.eclipse.jst.jee.server:web-customer-tracker-aop"/><Context docBase="spring-mvc-demo" path="/spring-mvc-demo1" reloadable="true" source="org.eclipse.jst.jee.server:spring-mvc-demo"/><Context docBase="spring-security-demo-02-basic-security" path="/spring-security-demo6" reloadable="true" source="org.eclipse.jst.jee.server:spring-security-demo-02-basic-security"/><Context docBase="spring-security-demo-08-jdbc-plaintext" path="/demo-08-jdbc-plaintext" reloadable="true" source="org.eclipse.jst.jee.server:spring-security-demo-08-jdbc-plaintext"/></Host>
     </Engine>
   </Service>
 </Server>
