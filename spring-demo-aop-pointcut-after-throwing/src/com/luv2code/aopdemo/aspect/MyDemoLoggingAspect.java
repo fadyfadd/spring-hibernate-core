@@ -25,8 +25,7 @@ public class MyDemoLoggingAspect {
 		// print out which method we are advising on
 		String method = theJoinPoint.getSignature().toShortString();
 		System.out.println("\n=====>>> Executing @After (finally) on method: " 
-							+ method);
-	
+							+ method);	
 	}
 	
 	
@@ -35,17 +34,17 @@ public class MyDemoLoggingAspect {
 			pointcut="execution(* com.luv2code.aopdemo.dao.AccountDAO.findAccounts(..))",
 			throwing="theExc")
 	public void afterThrowingFindAccountsAdvice(
-					JoinPoint theJoinPoint, Throwable theExc) {
+					JoinPoint theJoinPoint, Throwable theExc)  {
 		
 		// print out which method we are advising on
 		String method = theJoinPoint.getSignature().toShortString();
-		System.out.println("\n=====>>> Executing @AfterThrowing on method: " + method);
+		System.out.println("\n=====>>> Executing1 @AfterThrowing on method: " + method);
 		
 		// log the exception
-		System.out.println("\n=====>>> The exception is: " + theExc);
-	
+		System.out.println("\n=====>>> The exception is1: " + theExc);
+		 
+		 
 	}
-	
 	
 	
 	

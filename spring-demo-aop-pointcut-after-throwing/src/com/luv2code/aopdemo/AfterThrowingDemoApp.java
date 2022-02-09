@@ -22,12 +22,13 @@ public class AfterThrowingDemoApp {
 		List<Account> theAccounts = null;
 		
 		try {
-			// add a boolean flag to simulate exceptions
 			boolean tripWire = true;
 			theAccounts = theAccountDAO.findAccounts(tripWire);
+			// add a boolean flag to simulate exceptions
+			
 		}
 		catch (Exception exc) {
-			System.out.println("\n\nMain Program ... caught exception: " + exc);
+			System.out.println("\n\nMain Program1 ... caught exception: " + exc);
 		}
 		
 		// display the accounts
